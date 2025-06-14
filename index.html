@@ -173,51 +173,52 @@
                 <form class="form" id="main-form" action="#">
 
                     <h2 class="headline">Регистрация</h2>
+                    <div class="form__wrapper">
+                        <div class="form__inputs">
+                            <div class="form__item">
+                                <label for="name" class="form__label">Имя</label>
+                                <input type="text" class="form__input" placeholder=" " name="name" value="" />
+                            </div>
+                            <div class="form__item">
+                                <label for="surname" class="form__label">Фамилия</label>
+                                <input type="text" class="form__input" placeholder=" " name="surname" value="" />
+                            </div>
+                            <div class="form__item">
+                                <label for="email" class="form__label">E-mail</label>
+                                <input type="email" class="form__input" placeholder=" " name="email" value="" />
+                            </div>
+                            <div class="form__item">
+                                <label for="phone" class="form__label">Телефон</label>
+                                <input type="tel" class="form__input" placeholder=" " name="phone" value="" />
+                            </div>
+                            <div class="form__item">
+                                <label for="company" class="form__label">Название организации</label>
+                                <input type="text" class="form__input" placeholder=" " name="company" value="" />
+                            </div>
+                            <div class="form__item">
+                                <label for="job" class="form__label">Должность</label>
+                                <input type="text" class="form__input" placeholder=" " name="job" value="" />
+                            </div>
+                            <div class="form__item">
+                                <label for="taxId" class="form__label">ИНН</label>
+                                <input type="number" class="form__input" placeholder=" " name="taxId" value="" />
+                            </div>
+                            <div class="form__item form__item--checkbox">
+                                <input type="checkbox" id="privacy-policy" name="privacy-policy" class="form__checkbox"
+                                    checked />
+                                <label for="privacy-policy" class="form__checkbox-label">Я согласен на обработку
+                                    персональных данных</label>
+                                <div class="error-message" style="display: none"></div>
+                            </div>
+                        </div>
 
-                    <div class="form__inputs">
-                        <div class="form__item">
-                            <label for="name" class="form__label">Имя</label>
-                            <input type="text" class="form__input" placeholder=" " name="name" value="" />
-                        </div>
-                        <div class="form__item">
-                            <label for="surname" class="form__label">Фамилия</label>
-                            <input type="text" class="form__input" placeholder=" " name="surname" value="" />
-                        </div>
-                        <div class="form__item">
-                            <label for="email" class="form__label">E-mail</label>
-                            <input type="email" class="form__input" placeholder=" " name="email" value="" />
-                        </div>
-                        <div class="form__item">
-                            <label for="phone" class="form__label">Телефон</label>
-                            <input type="tel" class="form__input" placeholder=" " name="phone" value="" />
-                        </div>
-                        <div class="form__item">
-                            <label for="company" class="form__label">Название организации</label>
-                            <input type="text" class="form__input" placeholder=" " name="company" value="" />
-                        </div>
-                        <div class="form__item">
-                            <label for="job" class="form__label">Должность</label>
-                            <input type="text" class="form__input" placeholder=" " name="job" value="" />
-                        </div>
-                        <div class="form__item">
-                            <label for="taxId" class="form__label">ИНН</label>
-                            <input type="number" class="form__input" placeholder=" " name="taxId" value="" />
-                        </div>
-                        <div class="form__item form__item--checkbox">
-                            <input type="checkbox" id="privacy-policy" name="privacy-policy" class="form__checkbox"
-                                checked />
-                            <label for="privacy-policy" class="form__checkbox-label">Я согласен на обработку
-                                персональных данных</label>
-                            <div class="error-message" style="display: none"></div>
-                        </div>
+                        <button type="submit" class="form__button button button--primary">
+                            <span class="button__wrapper">
+                                <span class="button__text">Зарегистрироваться</span>
+                                <span class="button__text">Зарегистрироваться</span>
+                            </span>
+                        </button>
                     </div>
-
-                    <button type="submit" class="form__button button button--primary">
-                        <span class="button__wrapper">
-                            <span class="button__text">Зарегистрироваться</span>
-                            <span class="button__text">Зарегистрироваться</span>
-                        </span>
-                    </button>
 
                 </form>
             </div>

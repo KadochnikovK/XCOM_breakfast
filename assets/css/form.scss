@@ -1,7 +1,8 @@
 .form {
     display: flex;
     flex-direction: column;
-    padding: var(--space-sm);
+    // padding: var(--space-sm);
+    // background-color: red;
 
     &__button {
         margin-left: auto;
@@ -12,11 +13,32 @@
         }
     }
 
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-light-bg);
+        padding: var(--space-sm);
+        border-radius: var(--space-lg) var(--space-md);
+
+        @media(min-width: 640px) {
+            row-gap: var(--space-md);
+            border-radius: var(--space-xl);
+            padding: var(--space-5xl) var(--space-base);
+        }
+
+
+        @media(min-width: 1200px) {
+            row-gap: var(--space-lg);
+            padding: var(--space-7xl);
+        }
+    }
+
     &__inputs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         column-gap: var(--space-md);
         row-gap: var(--space-sm);
+
 
 
         @media(min-width: 640px) {
@@ -156,7 +178,7 @@
         border: 1px solid var(--color-dark);
         border-radius: var(--space-xs);
         width: 100%;
-
+        background-color: rgba(0, 0, 0, 0);
 
 
         @media(min-width: 640px) {
