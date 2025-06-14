@@ -737,7 +737,7 @@ a {
   position: relative;
 }
 .form__item--not-valid:not(.form__item--checkbox) .form__input {
-  border: 2px solid var(--color-red);
+  outline: 2px solid var(--color-red);
   color: var(--color-red);
   padding-right: 30px;
 }
@@ -772,7 +772,6 @@ a {
 }
 .form__item--focused .form__input {
   outline: 2px solid var(--color-blue) !important;
-  border: 1px solid var(--color-blue) !important;
 }
 .form__item--checkbox {
   display: flex;
