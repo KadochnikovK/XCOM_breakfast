@@ -11,7 +11,7 @@
         height: 100%;
         padding: var(--space-md);
         border-radius: 20px;
-        
+
         background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.png);
         // background-color: var(--color-dark);
         background-size: cover;
@@ -47,6 +47,7 @@
     &__headline {
         font-size: var(--fs-2xl);
         color: var(--color-white) !important;
+        margin-bottom: var(--space-md);
     }
 
     &__logo {
@@ -81,7 +82,7 @@
     }
 
     @media (min-width: 1200px) {
-        &__wrapper  {
+        &__wrapper {
             gap: var(--space-xl);
             padding: var(--space-6xl);
             padding-top: 15vh;
