@@ -4,26 +4,26 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 20,
         centeredSlides: false,
         loop: true,
-     
+
         simulateTouch: true,
         grabCursor: true,
-        
-        touchRatio: 0.6, 
+
+        touchRatio: 0.6,
         touchAngle: 45,
-    
+
         freeMode: {
             enabled: true,
             momentum: true,
-            momentumRatio: 2, 
+            momentumRatio: 2,
             momentumBounce: true,
-            momentumBounceRatio: 1, 
-            momentumVelocityRatio: 2, 
-            sticky: true 
+            momentumBounceRatio: 1,
+            momentumVelocityRatio: 2,
+            sticky: true
         },
-        
+
         speed: 600,
-        resistanceRatio: 0.6, 
-  
+        resistanceRatio: 0.6,
+
         navigation: {
             nextEl: '.gallery__button-next',
             prevEl: '.gallery__button-prev',
@@ -34,15 +34,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 freeMode: {
                     enabled: true,
                     momentum: true,
-                    momentumRatio: 3, 
+                    momentumRatio: 3,
                     sticky: true
                 },
-                speed: 800 
+                speed: 800
             },
             640: {
                 slidesPerView: 2,
                 freeMode: {
-                    enabled: true, 
+                    enabled: true,
                     momentum: true,
                     momentumRatio: 2
                 }
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             1000: {
                 slidesPerView: 3,
                 freeMode: {
-                    enabled: true, 
+                    enabled: true,
                     momentum: true,
                     momentumRatio: 2
                 }
@@ -101,6 +101,38 @@ document.addEventListener("DOMContentLoaded", function () {
         //     newErrorElement.textContent = message;
         //     formItem.appendChild(newErrorElement);
         // }
+    }
+
+    const inputs = form.querySelectorAll("input, textarea");
+    inputs.forEach(input => {
+        input.addEventListener('focus', handleInputFocus);
+        input.addEventListener('blur', handleInputBlur);
+    });
+
+    function handleInputFocus(e) {
+        const formItem = e.target.closest(".form__item");
+        if (formItem) {
+            formItem.classList.add("form__item--focused");
+
+            // Находим лейбл и добавляем ему класс
+            const label = formItem.querySelector("label");
+            if (label) {
+                label.classList.add("label--focused");
+            }
+        }
+    }
+
+    function handleInputBlur(e) {
+        const formItem = e.target.closest(".form__item");
+        if (formItem) {
+            formItem.classList.remove("form__item--focused");
+
+            // Находим лейбл и убираем класс
+            const label = formItem.querySelector("label");
+            if (label) {
+                label.classList.remove("label--focused");
+            }
+        }
     }
 
     function validateField(field) {

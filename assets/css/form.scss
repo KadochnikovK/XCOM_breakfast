@@ -39,7 +39,7 @@
             position: relative;
 
             .form__input {
-                border: 2px solid var(--color-red);
+                outline: 2px solid var(--color-red);
                 color: var(--color-red);
                 padding-right: 30px;
             }
@@ -62,13 +62,24 @@
                     bottom: 10px;
                     right: 16px;
                 }
-        
-        
+
+
                 @media(min-width: 1200px) {
                     font-size: 28px;
                     right: 24px;
                     bottom: 16px;
                 }
+            }
+        }
+
+        &--focused {
+
+            .form__label {
+                color: var(--color-blue) !important;
+            }
+
+            .form__input {
+                outline: 2px solid var(--color-blue) !important;
             }
         }
 

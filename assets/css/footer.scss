@@ -135,7 +135,7 @@
     &__copy {
 
         grid-column: 1 / -1;
-
+        line-height: var(--lh-md);
         display: flex;
         justify-content: space-between;
         gap: var(--space-xl);
@@ -154,7 +154,7 @@
     }
 
     &__copy-text {
-        max-width: 500px;
+        max-width: 550px;
         width: 100%;
     }
 }
