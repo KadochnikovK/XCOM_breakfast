@@ -1,0 +1,105 @@
+.schedule__list {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-bg);
+  border-radius: var(--space-md);
+  padding: var(--space-md) var(--space-xl);
+}
+@media (min-width: 640px) {
+  .schedule__list {
+    padding: var(--space-md) var(--space-5xl);
+    border-radius: var(--space-xl);
+  }
+}
+@media (min-width: 1200px) {
+  .schedule__list {
+    padding: var(--space-md) var(--space-8xl);
+  }
+}
+.schedule__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  position: relative;
+  padding: var(--space-md) 0;
+}
+.schedule__item:not(:nth-last-child(1)) {
+  border-bottom: 2px solid var(--color-grey-light);
+}
+@media (min-width: 640px) {
+  .schedule__item {
+    flex-direction: row;
+    gap: var(--space-lg);
+    align-items: center;
+    padding: var(--space-base) 0;
+  }
+}
+@media (min-width: 1200px) {
+  .schedule__item {
+    gap: var(--space-2xl);
+    padding: var(--space-5xl) 0;
+  }
+}
+.schedule__time {
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  flex-shrink: 0;
+  color: var(--color-blue);
+  position: relative;
+  padding-left: 24px;
+}
+.schedule__time::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  background-color: var(--color-orange);
+  border-radius: 50%;
+}
+@media (min-width: 640px) {
+  .schedule__time {
+    font-size: var(--fs-5xl);
+    width: 290px;
+    padding-left: 0;
+  }
+  .schedule__time::before {
+    content: none;
+  }
+}
+@media (min-width: 1200px) {
+  .schedule__time {
+    font-size: var(--fs-8xl);
+    width: 380px;
+  }
+}
+.schedule__divider {
+  display: none;
+}
+@media (min-width: 640px) {
+  .schedule__divider {
+    display: block;
+  }
+}
+.schedule__description {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-md);
+  color: var(--color-dark);
+  font-family: "Second";
+  font-weight: 400;
+}
+@media (min-width: 640px) {
+  .schedule__description {
+    flex: 1;
+    font-size: var(--fs-xl);
+    font-weight: 500;
+  }
+}
+@media (min-width: 1200px) {
+  .schedule__description {
+    flex: 1;
+    font-size: var(--fs-3xl);
+  }
+}/*# sourceMappingURL=schedule.css.map */
