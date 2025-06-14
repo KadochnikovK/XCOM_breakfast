@@ -63,12 +63,24 @@ document.addEventListener("DOMContentLoaded", function () {
     const hamburger = document.querySelector('.header__hamburger')
     const wrapper = document.querySelector('.offer__wrapper')
     const menu = document.querySelector('.header__menu')
+    const links = document.querySelectorAll('.header__link')
 
-    hamburger.addEventListener('click', () => {
+    const changeActiveMenu = () => {
         hamburger.classList.toggle('active')
         wrapper.classList.toggle('offer__wrapper--hidden')
         menu.classList.toggle('header__menu--active')
+
+    }
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (menu.classList.contains('header__menu--active')) {
+                changeActiveMenu()
+            }
+        })
+
     })
+    hamburger.addEventListener('click', changeActiveMenu)
+
 })
 
 document.addEventListener("DOMContentLoaded", function () {
