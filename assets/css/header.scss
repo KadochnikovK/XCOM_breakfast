@@ -45,7 +45,7 @@
         z-index: 8;
 
         &--active {
-            transform: translateY(-50%) translateX(0) rotate(0deg);
+            transform: translateY(-50%) translateX(24px) rotate(0deg);
         }
 
         &.active {

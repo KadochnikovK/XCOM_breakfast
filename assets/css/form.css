@@ -36,7 +36,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   -moz-column-gap: var(--space-md);
-       column-gap: var(--space-md);
+  column-gap: var(--space-md);
   row-gap: var(--space-sm);
 }
 @media (min-width: 640px) {
@@ -195,4 +195,4 @@
   color: #ff0000;
   font-size: var(--fs-xxxs);
   margin-top: 5px;
-}/*# sourceMappingURL=form.css.map */
+}
